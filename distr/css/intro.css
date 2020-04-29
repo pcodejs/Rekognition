@@ -1,0 +1,334 @@
+/*=======================================================================================
+| Template Name: AWS Amazon Rekognition - Deep Learning Powered Image Recognition Service
+| Theme URL: https://codecanyon.net/user/berkinedesign
+| Author: BerkineDesign
+| Author URL: https://codecanyon.net/user/berkinedesign
+| Version: 1.0
+| File name: intro.css
+| Date Created: 25.01.2020
+| Website: www.berkinedesign.com
+========================================================================================= */
+
+
+/* -------------------------------------------- */
+/*             TABLE OF CONTENTS
+/* -------------------------------------------- */
+/*   01 - Global Styles				            */
+/*   02 - Title	Layout				           	*/
+/*   03 - Demo Layout				            */
+/*   04 - Features Layout			            */
+/*   05 - Copyright  				            */
+
+
+
+/* ==========================================================================           
+ *
+ *    01 - GLOBAL STYLES
+ *
+ * ========================================================================== */
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	color: #0E2E40;
+}
+
+section {
+	background: #ECF4F7;;
+}
+
+h3 {
+	font-family: 'Poppins', sans-serif;
+	color: #25252B;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 20px;
+	text-shadow: 0 1px 2px rgba(37,37,37,.3);
+}
+
+h3 span.highlight {
+	color: #FF5733;
+}
+
+h6 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	color: #25252B;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+h6 span {
+	color: #FF5733;
+}
+
+a,
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+
+/* ==========================================================================           
+ *
+ *    02 - TITLE LAYOUT
+ *
+ * ========================================================================== */
+
+#title {
+	box-shadow: 0 3px 6px rgba(37,37,43,.8);
+	padding: 48px;
+	background: #2F3239;
+}
+
+#title h3 {
+	margin-bottom: 1.5rem;
+	color: #FFF;
+	text-shadow: 0 1px 3px rgba(37,37,43,.7);
+}
+
+#title h6 {
+	color: #FFF;
+	margin-bottom: 0;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    03 - DEMO LAYOUT
+ *
+ * ========================================================================== */
+
+#demo {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+#demo h3 {
+	margin-bottom: 1rem;
+}
+
+#demo h6 {
+	margin-bottom: 1.5rem;
+}
+
+#demo p {
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #505050;
+}
+
+#demo hr {
+    border: 2px solid #FF5733;
+    width: 5%;
+    margin-bottom: 3.5rem;
+}
+
+#demo .box-wrapper {
+	padding-left: 5rem;
+	padding-right: 5rem;
+	margin-bottom: 4rem;
+}
+
+#demo .box {
+	position: relative;
+	overflow: hidden;
+	height: 400px;
+	margin-bottom: 1rem;
+	background-position: top;
+	transition: ease-in-out 0.5s;
+	-webkit-box-shadow: 0px 0px 7px 2px rgba(37,37,43,0.3);
+	-moz-box-shadow: 0px 0px 7px 2px rgba(37,37,43,0.3);
+	box-shadow: 0px 0px 7px 2px rgba(37,37,43,0.3);
+}
+
+#demo .box h6 {
+	color: #FFF;
+	position: absolute;
+	bottom: 5%;
+	left: 30%;
+	font-weight: 800;
+}
+
+#demo .box1 {
+	background: url('../img/img3.png');
+	background-size: cover;
+}
+
+#demo .box2 {
+	background: url('../img/img2.jpg');
+	background-size: cover;
+}
+
+#demo .box3 {
+	background: url('../img/img1.jpg');
+	background-size: cover;
+}
+
+#demo .box4 {
+	background: url('../img/img4.jpg');
+	background-size: cover;
+}
+
+#demo .box5 {
+	background: url('../img/img5.jpg');
+	background-size: cover;
+}
+
+#demo .box6 {
+	background: url('../img/img6.jpg');
+	background-size: cover;
+}
+
+#demo .box:hover {
+	background-position: bottom;
+}
+
+#demo .box-hover {
+  top: 0;
+  position: absolute;
+  background: rgba(10, 10, 10, 0.7);
+  opacity: 0 ;
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+}
+
+#demo .box-button {
+  bottom: -50px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: #FFF;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+} 
+
+#demo .box-button a {
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  text-align: center;
+  border: 1px solid #FF5733;
+  background: #FF5733;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(37,37,43,0.5);
+	-moz-box-shadow: 0px 0px 7px 2px rgba(37,37,43,0.5);
+	box-shadow: 0px 0px 7px 2px rgba(37,37,43,0.5);
+}
+
+#demo .box:hover .box-hover,
+#demo .box:hover .box-button {
+  	opacity: 1;
+}
+
+#demo .box:hover .box-button {
+  	-webkit-transform: translateY(-250px);
+  	-moz-transform: translateY(-250px);
+  	transform: translateY(-250px);
+}
+
+#demo .box-button a:hover {
+  	background-color: #25252B;
+  	color: #FFF;
+  	border-color: #25252B;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    04 - FEATURES LAYOUT
+ *
+ * ========================================================================== */
+
+#features {
+	padding-top: 64px;
+	background: #2F3239;
+	-webkit-box-shadow: 0px -3px 6px 0px rgba(37,37,43,.8), 0 3px 6px rgba(37,37,43,.8);
+	-moz-box-shadow: 0px -3px 6px 0px rgba(37,37,43,.8), 0 3px 6px rgba(37,37,43,.8);
+	box-shadow: 0px -3px 6px 0px rgba(37,37,43,.8), 0 3px 6px rgba(37,37,43,.8);
+}
+
+#features h3 {
+	color: #FFF;
+	margin-bottom: 4rem;
+}
+
+#features .col-md-3 {
+	padding-right: 3rem;
+	padding-left: 3rem;
+	margin-bottom: 3rem;
+}
+
+#features .no-btm-mg {
+	margin-bottom: 0;
+}
+
+#features .feature {
+	background: #FFF;
+	padding: 2rem 1rem;
+	margin-bottom: 2rem;
+	-webkit-box-shadow: 0px 0px 7px 1px rgba(37,37,43,.7);
+	-moz-box-shadow: 0px 0px 7px 1px rgba(37,37,43,.7);
+	box-shadow: 0px 0px 7px 1px rgba(37,37,43,.7);
+}
+
+#features .feature p {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+#features .feature p:last-child {
+	margin-bottom: 0;
+}
+
+#features .feature:hover {
+	background: #FF5733;
+	transition: all ease 0.1s;
+	color: #FFF;
+	cursor: pointer;
+}
+
+#features #logo img {
+	width: auto;
+	height: 80px;
+	margin-bottom: 1rem;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    05 - COPYRIGHT LAYOUT
+ *
+ * ========================================================================== */
+
+#copyright {
+	padding: 32px;
+}
+
+#copyright p {
+	color: #25252B;
+	margin-bottom: 0.5rem;
+	font-size: 12px;
+}
+
+#copyright p span {
+	color: #FF5733;
+}
+
+#copyright p:last-child {
+	margin-bottom: 0;
+}

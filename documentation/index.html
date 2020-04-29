@@ -1,0 +1,929 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Amazon Rekognition - Deep Learning Powered Image Recognition Documentaion</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="Berkine Design">
+	<meta name="copyright" content="Berkine Design">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2019-08-015T14:11:14+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	<link rel="stylesheet" href="assets/css/custom.css" media="screen">
+
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />	
+
+
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/cufon.js"></script>
+	<script src="assets/js/font.js"></script>
+	<script src="assets/js/bootstrap.js"></script>
+	<script src="assets/js/bootstrap-scrollspy.js"></script>
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script>Cufon.replace("h1, h2, h3, h4, h5, h6");</script>	
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='450',easing='easeOutExpo';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#ffc400; font-weight: 600;}
+		
+		ol li { padding: 3px 0;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#EFAD0D), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #aaa;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{ background-color: #0E2E40;color: #222222; font-size: 14px;}
+
+		#documenter_sidebar ul a.current{background:#ffc400;color:#262626;}
+		#documenter_sidebar ul a{color:#fff;}
+		#documenter_sidebar ul a:hover{background:#ffc400;color:#262626;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project">
+
+	<div id="documenter_sidebar">
+	
+		<a href="#documenter_cover" id="documenter_logo" style="padding-top:4rem; padding-left:1rem;">Amazon Rekognition</a>
+		
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>			
+			<li><a href="#s3-information" title="Template Features">Amazon Rekognition Information</a></li>
+			<li><a href="#sdk-installation" title="PHP SDK Installation">AWS PHP SDK Installation</a></li>
+			<li><a href="#general-configuration" title="Installation">General Configuration</a></li>
+			<li><a href="#file-uploader" title="Installation">Amazon Rekognition</a></li>						
+			<li><a href="#create-bucket" title="Create Bucket">Create Amazon S3 Bucket</a></li>
+			<li><a href="#create-user" title="Create Bucket">Create AWS IAM User</a></li>
+			<li><a href="#support" title="Support">Support</a></li>
+		</ul>
+		
+		<div id="documenter_copyright">Copyright Berkine Design 2020</div>
+	</div>
+	
+	<div id="documenter_content" data-spy="scroll" data-target="documenter_nav">
+	
+		<section id="documenter_cover">
+			
+			<h1>Berkine</h1>
+			<h2>Amazon Rekognition - Deep Learning Powered Image Recognition Service</h2>
+			
+			<div id="documenter_buttons"></div>
+			
+			<hr>
+			
+			<ul>
+				<li>Created: 15/ 03/ 2020</li>
+				<li>by: <a href="http://codecanyon.net/user/berkinedesign">Berkine Design</a> </li>
+			</ul>
+			
+			<p><strong>Welcome!</strong> First of all we want to thank you for purchasing our Amazon Rekognition - Deep Learning Powered Image Recognition Service Template <br />
+				  We really do appreciate every sale. If you like our work please do not forget to rate it. It helps us in developing new and better items
+			</p>
+				  
+			<img src="assets/images/rating.jpg" alt="rating_image" />
+
+			<br />
+			<br />
+
+			<p>In the following sections we will explain how to set up and use it the easiest way possible. If you have any questions that you feel should have been in this document you can contact us through our profile page on <a href="http://codecanyon.net/user/berkinedesign">codecanyon.net/user/berkinedesign</a> and we'll get back to you as soon as possible. Thanks so much!!!</p>
+			<p class="info">For questions on basic HTML, JavaScript or CSS editing - please give your question a quick <strong>Google</strong> or visit <strong>W3Schools</strong> as template issues get top priority. You will need some knowledge of HTML/JS/PHP/CSS to edit this file uploader.</p>
+
+			
+		</section>
+		
+
+
+		<section id="s3-information">
+
+			<div class="page-header"><h3>Amazon Rekognition Information</h3><hr class="notop"></div>
+			
+			<p><strong>Amazon Rekognition</strong> makes it easy to add image and video analysis to your applications using proven, highly scalable, deep learning technology that requires no machine learning expertise to use. With Amazon Rekognition, you can identify objects, people, text, scenes, and activities in images and videos, as well as detect any inappropriate content. Amazon Rekognition also provides highly accurate facial analysis and facial search capabilities that you can use to detect, analyze, and compare faces for a wide variety of user verification, people counting, and public safety use cases.</p>
+			<p>With Amazon Rekognition, you can identify thousands of objects (such as bike, telephone, building), and scenes (such as parking lot, beach, city). When analyzing video, you can also identify specific activities such as "delivering a package" or "playing soccer".</p>
+			<p>Amazon Rekognition helps you identify potentially unsafe or inappropriate content across both image and video assets and provides you with detailed labels that allow you to accurately control what you want to allow based on your needs.</p>
+			<p>In photos, text appears very differently than neat words on a printed page. Amazon Rekognition can read skewed and distorted text to capture information like store names, street signs, and text on product packaging.</p>
+			<p>With Amazon Rekognition, you can easily detect when faces appear in images and videos and get attributes such as gender, age range, eyes open, glasses, facial hair for each. In video, you can also measure how these face attributes change over time, such as constructing a timeline of the emotions expressed by an actor.</p>
+			<p>Amazon Rekognition provides fast and accurate face search, allowing you to identify a person in a photo or video using your private repository of face images. You can also verify identity by analyzing a face image against images you have stored for comparison.</p>
+			<p>You can quickly identify well known people in your video and image libraries to catalog footage and photos for marketing, advertising, and media industry use cases.</p>
+				
+
+		</section>
+
+
+		<section id="sdk-installation">
+
+			<div class="page-header"><h3>AWS PHP SKD Installation (Version 3)</h3><hr class="notop"></div>
+			<p>The AWS PHP SDK v3 comes included in the app - "vendor" folder in the root directory of the app is the offical AWS PHP SDK</p>
+			<p>Please visit the following link for the up to date instructions regarding installation of <strong>AWS PHP SDK v3 and its new versions</strong> directly from Amazon Web Services page</p>
+			<p><a href="https://docs.aws.amazon.com/en_pv/sdk-for-php/v3/developer-guide/getting-started_installation.html" target="_blank">AWS PHP SDK Installation</a></p>
+			
+
+		</section>
+
+
+		<section id="general-configuration">
+		
+			<div class="page-header"><h3>General Settings Configuration</h3><hr class="notop"></div>
+			
+			<p> In order to run Amazon Rekognition - Deep Learning Powered Image Recognition Service correctly, you need to update the following lines accordingly:
+
+				<ol>
+
+					<li><p>Create AWS IAM User with Amazon Rekognition Full Access Policy attached, and also with S3 File Read/Write permission policies attached.</p>
+						<p>Download and save Access Key and Secret Access Key of the User</p>
+						<p>Create Amazon S3 bucket for uploading images(Must be in the same region where Amazon Rekognition will be used)</p>
+
+						<ul>
+							<li>For creating AWS IAM user please visit - Create AWS IAM User section </li>
+							<li>For creating Amazon S3 Bucket please visit - Create Amazon S3 Bucket section </li>
+						</ul>
+					</li>
+
+					<li><p>	Edit the 'config.php' file accordingly: </p></li>	
+					<li>Provide AWS IAM Access Key and Secret Access Key via AWS credientials files:
+
+						<ul>							
+							<li><p>This is a special, INI-formatted file stored under your HOME directory (~/.aws/credentials)</p></li>
+	
+	 						<li>[credential profile name]
+									<p><strong>aws_access_key_id = ANOTHER_AWS_ACCESS_KEY_ID</strong></p>
+									<p><strong>aws_secret_access_key = ANOTHER_AWS_SECRET_ACCESS_KE</strong></p>
+									<pre style="overflow: auto !important;" class="prettyprint lang-css linenums">
+
+return [
+	'rekognition' => [
+		/* 'accessKey' => '', */ 		# IAM User Access key (in case if you want to hard code directly )
+		/*'secretAccessKey' => '', */		# IAM User Secret Access key (in case if you want to hard code directly)
+		   'profile' => 'default', 		# AWS credentials profile to specify your credentials
+		/* 'region' => 'XX-XXXX-X', */		# AWS Region (selected data center)
+		/* 'version' => 'latest', */
+		/* 'bucketName' => 'bucket_name' */	# Amazon S3 Bucket Name (must be unique)
+	]
+];	
+
+						</pre>
+							</li>
+
+						</ul>
+					
+					</li>
+
+					<li><p>Provide AWS IAM Access Key and Secret Access Key hard coded into the code (NOT RECOMMENDED)</p>
+						<br/>
+						<pre style="overflow: auto !important;" class="prettyprint lang-css linenums">
+
+return [
+	'rekognition' => [
+		 'accessKey' => 'XXXXXXXXXXXXXXXXXXXX', 					# IAM User Access key (in case if you want to hard code directly )
+		 'secretAccessKey' => 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', 		# IAM User Secret Access key (in case if you want to hard code directly)
+		/* 'profile' => 'default', */		# AWS credentials profile to specify your credentials
+		/* 'region' => 'XX-XXXX-X', */		# AWS Region (selected data center)
+		/* 'version' => 'latest', */
+		/* 'bucketName' => 'bucket_name' */	# Amazon S3 Bucket Name (must be unique)
+	]
+];	
+
+						</pre>
+					<p>If you hard code keys into the code, make sure you add update following code in Rekognition.php file:</p>
+					<pre style="overflow: auto !important;" class="prettyprint lang-css linenums">
+$rekognition = new Aws\Rekognition\RekognitionClient([
+		'credentials' => [													# WARNING: We (AWS as well) don't recommend hardcoding any of your security keys in the code
+	    	'key'    => $config['rekognition']['accessKey'],				# In case you still want to hard code your access & secret access keys in your code				
+	    	'secret' => $config['rekognition']['secretAccessKey'],			# Uncomment 'credentials' and comment out 'profile'
+		], 
+		/* 'profile' => $config['rekognition']['profile'], */
+		'region'  => $config['rekognition']['region'],
+		'version' => $config['rekognition']['version']
+]);
+
+$this->rekognition = $rekognition;
+
+
+
+$s3 = new Aws\S3\S3Client([
+   'credentials' => [													# WARNING: We (AWS as well) don't recommend hardcoding any of your security keys in the code
+    	'key'    => $config['rekognition']['accessKey'],				# In case you still want to hard code your access & secret access keys in your code				
+    	'secret' => $config['rekognition']['secretAccessKey'],			# Uncomment 'credentials' and comment out 'profile'
+	], 
+	/* 'profile' => $config['rekognition']['profile'], */
+	'version' => $config['rekognition']['version'],		
+	'region'  => $config['rekognition']['region']
+]);
+					</pre>
+
+					</li>
+					<br/>
+					<li><p>Provide Amazon S3 Bucket name to which create IAM user has 'putObject and getObject' permissions</p><br/>
+
+						<pre style="overflow: auto !important;" class="prettyprint lang-css linenums">
+
+return [
+	'rekognition' => [
+		/* 'accessKey' => '', */ 		# IAM User Access key (in case if you want to hard code directly )
+		/*'secretAccessKey' => '', */		# IAM User Secret Access key (in case if you want to hard code directly)
+		/* 'profile' => 'default', */ 		# AWS credentials profile to specify your credentials
+		/* 'region' => 'XX-XXXX-X', */		# AWS Region (selected data center)
+		/* 'version' => 'latest', */
+		   'bucketName' => 'XXXXXXX'    	# Amazon S3 Bucket Name (must be unique)
+	]
+];	
+
+						</pre>
+					</li>
+
+					
+
+				</ol>
+				
+			</p>
+			
+			
+		
+		</section>
+
+
+
+
+		<section id="file-uploader">
+		
+			<div class="page-header"><h3>Amazon Rekognition</h3><hr class="notop"></div>
+
+<ol>
+			<li><p>Main Amazon Rekognition PHP functions are in Rekognition.php file</p></li>
+
+			<li><p>Each Image Processing Option has a backend php code, which calls function from Rekognition.php file</p></li>
+
+			<li><p>Each section of the code is commented well to avoid confusion.</p></li>
+
+			<li><p>Reach out for support request if facing issues with the backend code.</p></li>
+
+
+			
+
+			
+</ol>		
+		
+		</section>
+
+
+		
+		
+		<section id="create-bucket">
+		
+		
+			<div class="page-header"><h3>How to Create S3 Bucket</h3><hr class="notop"></div>
+		
+		
+                     <p>Before you can upload data to Amazon S3, you must create a bucket in one of the AWS
+                        Regions to
+                        store your data in. After you create a bucket, you can upload an unlimited number
+                        of data
+                        objects to the bucket. 
+                     </p>
+                     <p>A bucket is owned by the AWS account that created it. By default, you can create up
+                        to 100
+                        buckets in each of your AWS accounts. If you need additional buckets, you can increase
+                        your
+                        account bucket limit to a maximum of 1,000 buckets by submitting a service limit increase.
+                        For
+                        information about how to increase your bucket limit, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html">AWS
+                           Service Limits</a> in the <em>AWS General Reference</em>. 
+                     </p>
+                     <p>Buckets have configuration properties, including their geographical region, who has
+                        access
+                        to the objects in the bucket, and other metadata. 
+                     </p>
+                     <p class="title"><b>To create an S3 bucket</b></p>
+                     <ol>
+                        <li>
+                           <p>Sign in to the AWS Management Console and open the Amazon S3 console at
+                              <a href="https://console.aws.amazon.com/s3/" target="_blank">https://console.aws.amazon.com/s3/</a>.
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>Choose <b>Create bucket</b>.
+                           </p>
+                           
+                           
+                           <div class="mediaobject">
+                              
+                              
+                              <img src="assets/images/create-bucket.png" alt="&#xA;          Create bucket button in the S3 console.&#xA;        " style="max-width:100%" />
+                              
+                              
+                           </div>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>On the <b>Name and region</b> page, type a name for your bucket and choose
+                              the AWS Region where you want the bucket to reside. Complete the fields on this page
+                              as
+                              follows:
+                           </p>
+                           
+                           <ol>
+                              <li>
+                                 
+                                 <p>For <b>Bucket name</b>, type a unique DNS-compliant name for your new
+                                    bucket. Follow these naming guidelines: 
+                                 </p>
+                                 
+                                 <div class="itemizedlist">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <ul class="itemizedlist" type="disc">
+                                       <li class="listitem">
+                                          
+                                          <p>The name must be unique across all existing bucket names in Amazon S3. </p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p>The name must not contain uppercase characters.</p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p>The name must start with a lowercase letter or number.</p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p>The name must be between 3 and 63 characters long.</p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p>After you create the bucket you cannot change the name, so choose wisely.
+                                             
+                                          </p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p>Choose a bucket name that reflects the objects in the bucket because the bucket
+                                             name is visible in the URL that points to the objects that you're going to put in
+                                             your bucket.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                 </div>
+                              
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>For <b>Region</b>, choose the AWS Region where you want the bucket to
+                                    reside. Choose a Region close to you to minimize latency and costs, or to address
+                                    regulatory requirements. Objects stored in a Region never leave that Region unless
+                                    you
+                                    explicitly transfer them to another Region. For a list of Amazon S3 AWS Regions, see
+                                    <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">Regions and Endpoints</a> in the
+                                    <em>Amazon Web Services General Reference</em>.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>(Optional) If you have already set up a bucket that has the same settings that you
+                                    want to use for the new bucket that you want to create, you can set it up quickly
+                                    by
+                                    choosing <b>Copy settings from an existing bucket</b>, and then choosing
+                                    the bucket whose settings you want to copy.
+                                 </p>
+                                 
+                                 <p>The settings for the following bucket properties are copied: versioning, tags, and
+                                    logging.
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p>Do one of the following:</p>
+                                 
+                                 <div class="itemizedlist">
+                                    
+                                    
+                                    
+                                    <ul class="itemizedlist" type="disc">
+                                       <li class="listitem">
+                                          
+                                          <p>If you copied settings from another bucket, choose <b>Create</b>.
+                                             You're done, so skip the following steps.
+                                          </p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p>If not, choose <b>Next</b>.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 
+                              </li>
+                           </ol>
+                           
+                           <div class="mediaobject">
+                              
+                              <img src="assets/images/create-bucket-name-region.png" alt="&#xA;          Name and region page in the Create bucket wizard.&#xA;        " style="max-width:100%" />
+                              
+                              
+                              
+                           </div>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>On the <b>Configure options</b> page, you can configure the following
+                              properties and Amazon CloudWatch metrics for the bucket. Or, you can configure these
+                              properties and
+                              CloudWatch metrics later, after you create the bucket.
+                           </p>
+                           
+                           <ol>
+                              <li>
+                                 
+                                 <p class="title"><b><b>Versioning</b></b></p>
+                                 
+                                 <p>Select <b>Keep all versions of an object in the same bucket.</b> to
+                                    enable object versioning for the bucket. 
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p class="title"><b><b>Server access logging</b></b></p>
+                                 
+                                 <p>Select <b>Log requests for access to your bucket.</b> to enable server
+                                    access logging on the bucket. Server access logging provides detailed records for
+                                    the
+                                    requests that are made to your bucket.
+                                    
+                                 </p>
+                                 
+                                 <div class="mediaobject">
+                                    
+                                    <img src="assets/images/create-bucket-set-properties-1.png" alt="&#xA;" style="max-width:100%" />
+                                    
+                                    
+                                    
+                                 </div>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p class="title"><b><b>Tags</b></b></p>
+                                 
+                                 <p>You can use cost allocation bucket tags to annotate billing for your use of a
+                                    bucket. Each tag is a key-value pair that represents a label that you assign to a
+                                    bucket.
+                                 </p>
+                                 
+                                 <p>To add a tag, enter a <em>Key</em> and a <em>Value</em>.
+                                    Choose <b>Add another</b> to add another tag. 
+                                 </p>
+                                 
+                                 <div class="mediaobject">
+                                    
+                                    <img src="assets/images/create-bucket-set-properties-2.png" alt="&#xA;" style="max-width:100%" />
+                                    
+                                    
+                                    
+                                 </div>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p class="title"><b><b>Object-level logging</b></b></p>
+                                 
+                                 <p>Select <b>Record object-level API activity by using CloudTrail for an additional
+                                       cost</b> to enable object-level logging with CloudTrail. 
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p class="title"><b><b>Default encryption</b></b></p>
+                                 
+                                 <p>Select <b>Automatically encrypt objects when they are stored in S3</b>
+                                    to enable default encryption for the bucket. You can enable default encryption for
+                                    a
+                                    bucket so that all objects are encrypted when they are stored in the bucket. 
+                                 </p>
+                                 
+                                 <div class="mediaobject">
+                                    
+                                    <img src="assets/images/create-bucket-set-properties-3.png" alt="&#xA;              The create bucket wizard configure options page showing object-level logging&#xA;                and default encryption check boxes.&#xA;            " style="max-width:100%" />
+                                    
+                                    
+                                    
+                                 </div>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p class="title"><b><b>Object lock</b></b></p>
+                                 
+                                 <p>Select <b>Permanently allow objects in this bucket to be locked</b> if
+                                    you want to be able to lock objects in the bucket. Object lock requires that you enable
+                                    versioning on the bucket. 
+                                 </p>
+                                 
+                              </li>
+                              <li>
+                                 
+                                 <p class="title"><b><b>CloudWatch request metrics</b></b></p>
+                                 
+                                 <p>Select <b>Monitor requests in your bucket for an additional cost.</b>
+                                    to configure CloudWatch request metrics for the bucket.
+                                 </p>
+                                 
+                                 <div class="mediaobject">
+                                    
+                                    <img src="assets/images/create-bucket-config-management.png" alt="&#xA;              Configure options page showing the CloudWatch metrics check box.&#xA;            " style="max-width:100%" />
+                                    
+                                    
+                                    
+                                 </div>
+                                 
+                              </li>
+                           </ol>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Choose <b>Next</b>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>On the <b>Set permissions</b> page, you manage the permissions that are
+                              set on the bucket that you are creating. 
+                           </p>
+                           
+                           <p>Under <b>Block public access (bucket settings)</b>, we recommend that you
+                              do not change the default settings that are listed under <b>Block all public
+                                 access</b>. You can change the permissions after you create the bucket. 
+                           </p>
+                           
+                           <div class="aws-note">
+                              <p class="aws-note">Warning</p>
+                              <p>We highly recommend that you keep the default access settings for blocking public
+                                 access to the bucket that you are creating. Public access means that anyone in the
+                                 world
+                                 can access the objects in the bucket. 
+                              </p>
+                           </div>
+                           
+                           <p>If you intend to use the bucket to store Amazon S3 server access logs, in the
+                              <b>Manage system permissions</b> list, choose <b>Grant Amazon S3 Log
+                                 Delivery group write access to this bucket</b>. 
+                           </p>
+                           
+                           <div class="mediaobject">
+                              
+                              
+                              <img src="assets/images/create-bucket-set-permissions.png" alt="&#xA;          Set permissions page with default settings.&#xA;        " style="max-width:100%" />
+                              
+                              
+                           </div>
+                           
+                           <p>When you're done configuring permissions on the bucket, choose
+                              <b>Next</b>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>On the <b>Review</b> page, verify the settings. If you want to change
+                              something, choose <b>Edit</b>. If your current settings are correct, choose
+                              <b>Create bucket</b>.
+                           </p>
+                           
+                        </li>
+                     </ol>
+		
+		
+		</section>
+		
+		
+		<section id="create-user">
+		
+			<div class="page-header"><h3>Creating AWS IAM Users (via AWS Console)</h3><hr class="notop"></div>
+                     
+                     <p>You can use the AWS Management Console to create IAM users.</p>
+                     
+                     <p class="title"><b>To create one or more IAM users (console)</b></p>
+                     <ol>
+                        <li>
+                           <p>Sign in to the AWS Management Console and open the IAM console at <a href="https://console.aws.amazon.com/iam/" target="_blank">https://console.aws.amazon.com/iam/</a>.
+                           </p>
+                        </li>
+                        <li>
+                           
+                           <p>In the navigation pane, choose <b>Users</b> and then choose
+                              <b>Add user</b>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Type the user name for the new user. This is the sign-in name for AWS. If you want
+                              to add more than one user at the same time, choose <b>Add another user</b>
+                              for each additional user and type their user names. You can add up to 10 users at
+                              one
+                              time.
+                           </p>
+                           
+                           <div class="aws-note">
+                              <p class="aws-note">Note</p>
+                              <p>User names can be a combination of up to 64 letters, digits, and these characters:
+                                 plus (+), equal (=), comma (,), period (.), at sign (@), and hyphen (-). Names must
+                                 be
+                                 unique within an account. They are not distinguished by case. For example, you cannot
+                                 create two users named <em>TESTUSER</em> and <em>testuser</em>.
+                                  
+                              </p>
+                           </div>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Select the type of access this set of users will have. You can select programmatic
+                              access, access to the AWS Management Console, or both.
+                           </p>
+                           
+                           <div class="itemizedlist">
+                              
+                              
+                              
+                              <ul class="itemizedlist" type="disc">
+                                 <li class="listitem">
+                                    
+                                    <p>Select <b>Programmatic access</b> if the users require access to the
+                                       API, AWS CLI, or Tools for Windows PowerShell. This creates an access key for each
+                                       new user. You can view or
+                                       download the access keys when you get to the <b>Final</b> page.
+                                    </p>
+                                    
+                                 </li>
+                                 <li class="listitem">
+                                    
+                                    <p>Select <b>AWS Management Console access</b> if the users require access to the
+                                       AWS Management Console. This creates a password for each new user.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                           </div>
+                           
+                           <ol>
+                              <li>
+                                 
+                                 <p>For <b>Console password</b>, choose one of the following:
+                                 </p>
+                                 
+                                 <div class="itemizedlist">
+                                    
+                                    
+                                    
+                                    <ul class="itemizedlist" type="disc">
+                                       <li class="listitem">
+                                          
+                                          <p><b>Autogenerated password</b>. Each user gets a randomly
+                                             generated password that meets the account password policy in effect (if any). You
+                                             can view or download the passwords when you get to the <b>Final</b>
+                                             page.
+                                          </p>
+                                          
+                                       </li>
+                                       <li class="listitem">
+                                          
+                                          <p><b>Custom password</b>. Each user is assigned the password that
+                                             you type in the box.
+                                          </p>
+                                          
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 
+                              </li>
+                              
+                           </ol>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Choose <b>Next: Permissions</b>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>On the <b>Set permissions</b> page, specify how you want to assign
+                              permissions to this set of new users. Choose one of the following three options:
+                           </p>
+                           
+                           <div class="itemizedlist">
+                              
+                              
+                              
+                              
+                              <ul class="itemizedlist" type="disc">
+                                 <li class="listitem">
+                                    
+                                    <p><b>Add user to group</b>. Choose this option if you want to assign
+                                       the users to one or more groups that already have permissions policies. IAM displays
+                                       a list of the groups in your account, along with their attached policies. You can
+                                       select one or more existing groups, or choose <b>Create group</b> to
+                                       create a new group. 
+                                    </p>
+                                    
+                                 </li>
+                                 <li class="listitem">
+                                    
+                                    <p><b>Copy permissions from existing user</b>. Choose this option to
+                                       copy all of the group memberships, attached managed policies, embedded inline
+                                       policies, and any existing permissions
+                                          boundaries from an existing user to the new users. IAM displays a list of
+                                       the users in your account. Select the one whose permissions most closely match the
+                                       needs of your new users.
+                                    </p>
+                                    
+                                 </li>
+                                 <li class="listitem">
+                                    
+                                    <p><b>Attach existing policies to user directly</b>. Choose this option
+                                       to see a list of the AWS managed and customer managed policies in your account.
+                                       Select the policies that you want to attach to the new users or choose
+                                       <b>Create policy</b> to open a new browser tab and create a new policy
+                                       from scratch. After you create the policy, close that tab and return to your original tab to add
+                                       the policy to the new user. As a best
+                                          practice, we recommend that you instead attach your policies to a group and
+                                       then make users members of the appropriate groups.
+                                    </p>
+                                    
+                                 </li>
+                              </ul>
+                           </div>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>(Optional) Set a permissions
+                                 boundary. This is an advanced feature. 
+                           </p>
+                           
+                           <p>Open the <b>Set permissions boundary</b> section and choose
+                              <b>Use a permissions boundary to control the maximum user permissions</b>.
+                              IAM displays a list of the AWS managed and customer managed policies in your account.
+                              Select the policy to use for the permissions boundary or choose <b>Create
+                                 policy</b> to open a new browser tab and create a new policy from scratch. 
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Choose <b>Next: Tags</b>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>(Optional) Add metadata to the user by attaching tags as key-value pairs. 
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Choose <b>Next: Review</b> to see all of the choices you made up to this
+                              point. When you are ready to proceed, choose <b>Create user</b>.
+                           </p>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>To view the users' access keys (access key IDs and secret access keys), choose
+                              <b>Show</b> next to each password and access key that you want to see. To
+                              save the access keys, choose <b>Download .csv</b> and then save the file to
+                              a safe location. 
+                           </p> 
+                           
+                           <div class="aws-note">
+                              <p class="aws-note">Important</p>
+                              <p>This is your only opportunity to view or download the secret access keys, and you
+                                 must
+                                 provide this information to your users before they can use the AWS API. Save the user's
+                                 new access key ID and secret access key in a safe and secure place. <b>You 
+                                    will not have access to the secret keys again after this step.</b>
+                                 
+                              </p>
+                           </div>
+                           
+                        </li>
+                        <li>
+                           
+                           <p>Provide each user with his or her credentials. On the final page you can choose
+                              <b>Send email</b> next to each user. Your local mail client opens with a
+                              draft that you can customize and send. The email template includes the following details
+                              to each user:
+                           </p>
+                           
+                          
+                          
+                        </li>
+                     </ol>
+				
+		</section>
+
+
+		
+		
+
+		
+
+
+
+
+		<section id="support">
+		
+			<div class="page-header"><h3>Support</h3><hr class="notop"></div>
+			
+			<p>Support includes bugs fixing, and general problem solving with features explained on the template&rsquo;s official sales page.</p>
+			<h5 id="support_strongsupport_does_not_include_strong"><strong>Support does not include</strong>:</h5>
+			
+			<ul>
+				<li><strong>solving problems for plugins not packaged with our framework and templates;</strong></li>
+				<li><strong>plugins integration;</strong></li>
+				<li><strong>adding new features or extending the features currently available;</strong></li>
+				<li><strong>any type of modification or customization.</strong></li>
+			</ul>
+
+			<br />
+			
+			<img src="assets/images/rating.jpg" alt="rating_image" />
+			
+			<br />
+			<br />
+			
+			<p>Once again, thank you so much for purchasing this Amazon Rekognition - Deep Learning Powered Image Recognition Service . As we said at the beginning, We&#39;d be glad to help you if you have any questions relating 
+				  to this template. No guarantees, but we&#39;ll do my best to assist. If you have a more general question relating to the templates on CodeCanyon, 
+				  you might consider visiting the forums and asking your question in the &quot;Item Discussion&quot; section.
+			</p>
+			
+			<p>Regards,<br><strong>Berkine Design</strong></p>
+			
+			<p>&nbsp;</p>
+
+		</section>
+		
+	
+	</div>
+</body>
+</html>

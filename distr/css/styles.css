@@ -1,0 +1,672 @@
+/*=======================================================================================
+| Template Name: AWS Amazon Rekognition - Deep Learning Powered Image Recognition Service
+| Theme URL: https://codecanyon.net/user/berkinedesign
+| Author: BerkineDesign
+| Author URL: https://codecanyon.net/user/berkinedesign
+| Version: 1.0
+| File name: styles.css
+| Date Created: 15.03.2020
+| Website: www.berkinedesign.com
+========================================================================================= */
+
+
+/* -------------------------------------------- */
+/*             TABLE OF CONTENTS
+/* -------------------------------------------- */
+/*   00 - PRELOAD STYLES			            */
+/*   01 - GLOBAL STYLES 			            */
+/*   02 - NAVIGATION MENU		                */
+/*   03 - MAIN IMAGE WRAPPER		            */
+/*   04 - OUTPUT LABEL STYLES  	       	        */
+/*   05 - PURCHASE BUTTON & AWS LOGO            */
+/*   06 - COPYRIGHT      			            */
+/*   07 - MOBILE RESPONSIVE STYLES              */
+
+
+
+/* ==========================================================================           
+ *
+ *    00 - PRELOAD STYLES
+ *
+ * ========================================================================== */
+
+.no-js #loader { display: none;  }
+
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+
+.se-pre-con {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url(../img/preload.gif) center no-repeat #fff;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    01 - GLOBAL STYLES
+ *
+ * ========================================================================== */
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	color: #FFF;
+}
+
+section {
+	background: #F9F9F9;
+	padding-bottom: 64px;
+}
+
+section .container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+h3 {
+	color: #FFF;
+	text-transform: uppercase;
+	margin-bottom: 4rem;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+h6 {
+	font-size: 13px;
+	color: #FFF;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+section {
+ background: top left url('../img/background.jpg') no-repeat fixed;
+ background-size: cover;
+}
+
+section .title h3 {
+	text-shadow: 0 1px 3px rgba(0,0,0,.6);
+}
+
+section .title span {
+	color: #FF5733;
+}
+
+section #box {
+	padding-left: 8rem;
+	padding-right: 8rem;
+}
+
+section #outer-wrapper {
+	background: #2f3239;
+	border-top: 7px solid #FF5733;
+	box-shadow: 0 6px 8px 2px rgba(0,0,0,0.7);
+	padding: 4rem;
+	width: 100%;
+	position: relative;
+}
+
+section #outer-wrapper h3 {
+	text-align: center;
+	font-size: 20px;
+	letter-spacing: 0.5px;
+	margin-bottom: 1rem;
+	color: #FFC300;
+	font-weight: 800;
+}
+
+section #outer-wrapper h5 {
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 4rem;
+	text-align: center;
+}
+
+section #outer-wrapper h5 span {
+	color: #FF5733;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    02 - NAVIGATION MENU
+ *
+ * ========================================================================== */
+
+#top-nav {
+	background: #2f3239;
+	box-shadow: 0 3px 6px rgba(47,50,57,.7);
+	margin-bottom: 64px;
+}
+
+#top-nav .container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.navbar {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	line-height: 50px;
+	font-weight: 700;
+	z-index: 100;
+	-webkit-transition: all ease-in 0.2s;
+	transition: all ease-in 0.2s;
+}
+
+.navbar-nav {
+  	width: 100%;
+  	display: flex;
+  	justify-content: flex-end;
+}
+
+.navbar-nav li.nav-item a.nav-link {
+  	text-transform: uppercase;
+  	padding: 0px 15px;
+  	letter-spacing: 1px;
+  	color: #FFF;
+  	font-size: 12px;
+}
+
+.navbar-brand {
+  	color: #FFF;
+  	font-size: 14px;
+  	text-transform: uppercase;
+  	font-weight: 800;
+}
+
+.navbar-brand span {
+  	color: #FF5733;
+}
+
+.navbar-brand:hover {
+	color: #FFF;
+}
+
+.dropdown-menu {
+	padding: 0;
+	font-size: 12px;
+	margin-top: 3px;
+	border-radius: 0;
+	background: #2f3239;
+	box-shadow: 0px 4px 7px 1px rgba(0,0,0,0.6);
+}
+
+.dropdown-item {
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: 700;
+	border-bottom: 1px solid #1c1c1a;
+}
+
+.dropdown-item:last-child {
+	border-bottom: none;
+}
+
+.dropdown-item:hover {
+	color: #FFF;
+	background-color: #FF5733;
+	transition: all .1s ease;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    03 - MAIN IMAGE WRAPPER
+ *
+ * ========================================================================== */
+
+ #image-holder {
+ 	border: 2px solid #1C1C1A;
+ 	background: #535969;
+ 	align-content: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+ }
+
+#image-wrapper,
+#image-wrapper-comparison {
+ 	height: 100%;
+ 	min-height: 580px;
+ 	overflow: hidden;
+ 	position: relative;
+ }
+
+#comparison #image-wrapper, 
+#comparison #image-wrapper-comparison {
+	min-height: 500px;
+}
+
+#image-wrapper img,
+#image-wrapper-comparison img {
+	display: block;
+	max-width:100%!important; 
+	z-index: 0;
+	position: relative;
+}
+
+#image-wrapper canvas,
+#image-wrapper-comparison canvas {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+
+#image-moderation canvas {
+	z-index: -1!important;
+}
+
+/* -------------------------------------------- */
+/* 		Blur Button (For Image Moderation)
+/* -------------------------------------------- */
+
+#image-buttons {
+	position: absolute;
+	top: 46%;
+	left: 41%;
+	z-index: 10;
+}
+
+#image-buttons #image-blur {
+	display: none;
+}
+
+#image-buttons button {
+	text-decoration: none;
+	padding: 15px 25px;
+	text-transform: uppercase;
+	background: none;
+	border: 2px solid #FFF;
+	color: #FFF;
+	font-weight: 800;
+	transition: all 0.5s ease;
+}
+
+#image-buttons button:hover {
+	background: #FF5733;
+	border: 2px solid #FF5733;
+}
+
+/* -------------------------------------------- */
+/* 		Image Utilities
+/* -------------------------------------------- */
+
+#image-utilities {
+	margin-top: 1rem;
+	display: inline-flex;
+	width: 100%;
+}
+
+/* -------------------------------------------- */
+/* 		Demo Images
+/* -------------------------------------------- */
+
+#sample-image,
+#sample-image-comparison {
+	padding: 1rem;
+}
+
+#sample-image h6, 
+#sample-image-comparison h6 {
+	margin-bottom: 1rem;
+}
+
+#sample-image span,
+#sample-image-comparison span {
+	width: 100px;
+	overflow: hidden;
+	height: 100px;
+	border: 2px solid #1C1C1A;
+}
+
+#sample-image a.active img,
+#sample-image-comparison a.active img {
+	border: 2px solid #FF5733;
+}
+
+#sample-image img,
+#sample-image-comparison img {
+	width: 100px;
+	overflow: hidden;
+	height: 100px;
+	border: 2px solid #1C1C1A;
+	margin-right: 20px;
+}
+
+#sample-image img:last-child,
+#sample-image-comparison img:last-child {
+	margin-right: 0;
+}
+
+/* -------------------------------------------- */
+/* 		Upload Image Button
+/* -------------------------------------------- */
+
+#upload-image {
+	padding: 1rem;
+	overflow: hidden;
+}
+
+#upload-image h6 {
+	margin-bottom: 1.1rem;
+}
+
+#upload-image p {
+	font-size: 10px;
+	margin-bottom: 0;
+}
+
+#upload-image p span {
+	color: #FF5733;
+}
+
+#upload-image .upload {
+	margin-bottom: 0.5rem;
+	font-size: 14px;
+	font-weight: 700;
+	overflow: hidden;
+}
+
+#upload-image .upload i {
+	margin-right: 0.5rem;
+}
+
+#upload-image .upload .upload-image {
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+	width: 1px;
+	height: 1px;
+}
+
+#upload-image .upload .upload-image + label {
+	padding: 0.9rem 2.5rem;
+	background-color: #FFC300;
+	color: #1C1C1A;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-bottom: 0;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+#upload-image .upload .upload-image + label:hover {
+	background: #FF5733;
+	color: #FFF;
+	transition: all 0.2s ease;
+}
+
+/*------------------------------------------*/
+/*    Upload Status Messages
+/*------------------------------------------*/
+ 
+ #status-message,
+ #status-message-comparison {
+ 	margin-top: 1rem;
+ 	padding: 10px;
+    text-align: center;
+    display: none;
+    font-size: 10px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+.success {
+  color:green;
+  background: #e3ffd5;
+}
+
+.error {
+  color: #FFF;
+  background: #D13212;
+}
+
+
+
+ /* ==========================================================================           
+ *
+ *    04 - OUTPUT LABEL STYLES
+ *
+ * ========================================================================== */
+
+#label-container {
+ 	border: 1px solid #1C1C1A;
+ 	padding: 2rem;
+ 	min-height: 580px;
+ 	position: relative;
+ 	margin-bottom: 1.5rem;
+ }
+
+#comparison #label-container {
+	min-height: 500px;
+}
+
+#label-container #columns {
+	margin-bottom: 0.7rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid #1c1c1a;
+}
+
+#label-container .left {
+	float: left;
+}
+
+#label-container .right {
+ 	float: right;
+ } 
+
+/* -------------------------------------------- */
+/* 		Labels
+/* -------------------------------------------- */
+
+#labels .label {
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+#labels .label {
+	display: flex;
+	justify-content: space-between;
+ 	background-color: #1c1c1a;
+ 	padding: 0.5rem 1rem;
+ 	margin-bottom: 0.5rem;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* -------------------------------------------- */
+/* 		Loading Animation
+/* -------------------------------------------- */
+
+#processing {
+	position: absolute;
+	top: 45%;
+	left: 45%;
+}
+
+.deactivated {
+	display: none;
+}
+
+/* -------------------------------------------- */
+/* 		Download Action Button
+/* -------------------------------------------- */
+
+#action button {
+	text-decoration: none;
+	border: none;
+	background-color: #FFC300;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+	font-size: 13px;
+	outline: none;
+	font-weight: 700;
+	padding: 0.9rem 2.5rem;
+	color: #1C1C1A;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 2px 1px -1px rgba(0, 0, 0, 0.3), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
+}
+
+#action button:hover {
+	background-color: #FF5733;
+	color: #FFF;
+	transition: all 0.2s ease;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    05 - PURCHASE BUTTON & AWS LOGO
+ *
+ * ========================================================================== */
+
+#purchase-button {
+	margin-left: 2rem;
+}
+
+#purchase-button a {
+	background: #D13212;
+	border: 1px solid #D13212;
+	padding: 15px 60px;
+	text-transform: uppercase;
+	color: #FFF;
+	outline: none;
+	font-size: 12px;
+  	text-decoration: none;
+}
+
+#purchase-button a:hover {
+	background: #2f3239;
+	border: 1px solid #D13212;
+	color: #D13212;
+	transition: all 0.2s ease;
+}
+
+/* -------------------------------------------- */
+/* 		AWS Logo
+/* -------------------------------------------- */
+
+#logo {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+#logo p {
+	font-family: 'Poppins', sans-serif;
+	margin-bottom: -5px;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 600;
+	padding-left: 13px;
+	color: #FFF;
+}
+
+#logo img {
+	width: 100px;
+}
+
+
+
+/* ==========================================================================           
+ *
+ *    06 - COPYRIGHT
+ *
+ * ========================================================================== */
+
+#copyright {
+	margin-top: 1.5rem;
+}
+
+#copyright p {
+	margin-bottom: 0;
+	font-size: 12px;
+	color: #FFF;
+}
+
+#copyright a {
+	text-decoration: none;
+	outline: none;
+}
+
+#copyright a:hover {
+	color: #ffc107;
+}
+
+
+/* ==========================================================================           
+ *
+ *    07 - MOBILE RESPONSIVE STYLES
+ *
+ * ========================================================================== */
+
+@media only screen and ( max-width: 660px ) 
+{
+
+	section #outer-wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	section #box {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#demo .box-wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	#sample-image {
+		margin-bottom: 3rem;
+	}
+
+	#logo {
+		margin-left: 0;
+		margin-bottom: 2rem;
+		left: 37%;
+	}
+
+	#purchase-button p {
+		font-size: 12px;
+	}
+
+	#purchase-button a {
+		font-size: 12px;
+	}
+	
+	#copyright {
+		padding-left: 1rem;
+	}
+
+	#copyright p {
+		font-size: 10px;
+	}
+}
+
+@media only screen and ( max-width: 320px ) 
+{
+	#logo {
+		left: 35%;
+	}
+}
+
